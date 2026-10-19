@@ -3,8 +3,10 @@
 set -euo pipefail
 cd "$(dirname "$0")"
 
-swift build -c release
-BIN="$(swift build -c release --show-bin-path)/WakeUpTime"
+# Universal binary (Apple Silicon + Intel)
+ARCHS=(--arch arm64 --arch x86_64)
+swift build -c release "${ARCHS[@]}"
+BIN="$(swift build -c release "${ARCHS[@]}" --show-bin-path)/WakeUpTime"
 APP="build/Wake Up Time.app"
 
 rm -rf "$APP"
@@ -19,3 +21,8 @@ rm -rf build/AppIcon.iconset
 xattr -cr "$APP"
 codesign --force --sign - "$APP"
 echo "Built: $APP"
+
+# Zip for distribution (GitHub Releases)
+rm -f "build/Wake Up Time.zip"
+ditto -c -k --keepParent "$APP" "build/Wake Up Time.zip"
+echo "Packaged: build/Wake Up Time.zip"
