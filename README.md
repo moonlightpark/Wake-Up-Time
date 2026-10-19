@@ -2,6 +2,8 @@
 
 ![Wake Up Time](IMG/screen.png)
 
+![Full Screen Clock](IMG/full_screen.png)
+
 A Swift/SwiftUI reimplementation of the macOS alarm clock app **Wake Up Time** (Rocky Sand Studio, v1.4).
 The feature set and UI are rebuilt from the original app's bundle resources, help book, and binary strings.
 
