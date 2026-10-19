@@ -7,7 +7,7 @@ The feature set and UI are rebuilt from the original app's bundle resources, hel
 
 ## Download
 
-Get `Wake Up Time.zip` from [Releases](https://github.com/moonlightpark/Wake-Up-Time/releases), unzip it, and move it to Applications.
+Get `WakeUpTime.zip` from [Releases](https://github.com/moonlightpark/Wake-Up-Time/releases), unzip it, and move it to Applications.
 The app is ad-hoc signed and not notarized, so the first launch is blocked by Gatekeeper.
 Right-click it in Finder → **Open**, or run:
 
