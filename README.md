@@ -1,7 +1,19 @@
 # Wake Up Time
 
+![Wake Up Time](IMG/screen.png)
+
 A Swift/SwiftUI reimplementation of the macOS alarm clock app **Wake Up Time** (Rocky Sand Studio, v1.4).
 The feature set and UI are rebuilt from the original app's bundle resources, help book, and binary strings.
+
+## Download
+
+Get `Wake Up Time.zip` from [Releases](https://github.com/moonlightpark/Wake-Up-Time/releases), unzip it, and move it to Applications.
+The app is ad-hoc signed and not notarized, so the first launch is blocked by Gatekeeper.
+Right-click it in Finder → **Open**, or run:
+
+```bash
+xattr -dr com.apple.quarantine "/Applications/Wake Up Time.app"
+```
 
 ## Build & run
 
